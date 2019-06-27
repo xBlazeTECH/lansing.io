@@ -2,6 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 
 const app = express();
+app.use(express.static(path.join(__dirname, 'public')))
 const port = process.env.PORT;
 
 var mysql_connected;
