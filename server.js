@@ -11,14 +11,14 @@ var mysql_conn = mysql.createConnection({
     password: 'Lansing123!'
 });
 
-var test_mysql_conn = function(callback) {
+var test_mysql_conn = function() {
     mysql_conn.connect(function(err) {
         if (err) {
             console.log(err.code);
-            if (callback) callback("FAILED")
+            return "FAILED";
         } else {
             console.log('connected...');
-            if (callback) callback("OK");
+            return "OK";
         }
     });
 }
