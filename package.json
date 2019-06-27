@@ -1,0 +1,10 @@
+{
+    "name": "lansingio",
+    "version": "1.0.0",
+    "description": "Lansing's personal website",
+    "main": "server.js",
+    "dependencies": {
+        "mysql": "*",
+        "express": "3.x"
+    }
+}
