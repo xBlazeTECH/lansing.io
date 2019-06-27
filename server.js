@@ -1,5 +1,8 @@
-var http = require('http'),
-    mysql = require('mysql');
+const express = require('express');
+const mysql = require('mysql');
+
+const app = express()
+const port = process.env.PORT
 
 var mysql_conn = mysql.createConnection({
     socketPath: '/srv/run/mysqld/mysqld.sock',
@@ -17,14 +20,11 @@ var test_mysql_conn = function(callback) {
             console.log('connected...');
             if (callback) callback("OK");
         }
-    })
+    });
 }
 
-http.createServer(function (req, res) {
-    res.writeHead(200, {'Content-Type': 'text/plain'});
-    res.write('Hello Node.js!\n');
-    test_mysql_conn(function(mysql_status) {
-        res.write('MySQL connection: ' + mysql_status + '\n');
-        res.end();
-    });
-}).listen(process.env.PORT)
+app.get('/', (req, res) => res.send('Hello World!'));
+
+app.get("/sqltest", (req, res) => res.send("MySQL Connection: " + mysql_status + '\n');
+
+app.listen(port, () => console.log('Website is running on port ${port}!'));
