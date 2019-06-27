@@ -25,6 +25,6 @@ var test_mysql_conn = function(callback) {
 
 app.get('/', (req, res) => res.send('Hello World!'));
 
-app.get("/sqltest", (req, res) => res.send("MySQL Connection: " + mysql_status + '\n');
+app.get("/sqltest", (req, res) => res.send("MySQL Connection: " + mysql_status + '\n'));
 
 app.listen(port, () => console.log('Website is running on port ${port}!'));
