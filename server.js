@@ -32,7 +32,9 @@ var test_mysql_conn = function() {
     }
 }
 
-app.get('/', (req, res) => res.send('Hello World!'));
+app.get('/', function(req, res) {
+  res.send('URL: ' + req.get('host'));	
+} res.send('Hello World!');
 
 app.get("/sqltest", (req, res) => res.send("MySQL Connection: " + test_mysql_conn() + '\n'));
 
