@@ -33,8 +33,17 @@ var test_mysql_conn = function() {
 }
 
 app.get('/', function(req, res) {
-  res.send('URL: ' + req.get('host'));
-  res.send('Hello World!');
+	if (req.get('host') === 'lansing.io') {
+		res.send('URL: ' + req.get('host'));
+		res.send('Welcome to my landing page! This page is under construction!');
+	} else if (req.get('host') === 'vf.lansing.io') {
+		res.send('URL: ' + req.get('host'));
+		res.send('Welcome to my landing page! This page is under construction!');
+	} else {
+		res.send('URL: ' + req.get('host'));
+		res.send('Sorry, Page not found!');
+	}
+
 });
 
 app.get("/sqltest", (req, res) => res.send("MySQL Connection: " + test_mysql_conn() + '\n'));
