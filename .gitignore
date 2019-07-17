@@ -1,3 +1,8 @@
+# Cookbook Configuration Files
+config/devices.json
+config/system.json
+config/users.json
+
 # Logs
 logs
 *.log

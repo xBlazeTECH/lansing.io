@@ -1,2 +1,2 @@
-# lansing.io
-My Personal Website
+# Lansing's Personal Website
+This website is under development. Website located at http://lansing.io
