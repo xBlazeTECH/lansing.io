@@ -1,0 +1,76 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport',content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    title= title
+    
+    // Include Bootstrap and jQuery
+    link(rel='stylesheet', href='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css')
+    
+    // Include Custom Stylehsheets
+    link(rel='stylesheet', href='/stylesheets/dashboard.css')
+  body
+    nav.navbar.navbar-dark.fixed-top.bg-dark.flex-md-nowrap.p-0.shadow
+      a(href="#").navbar-brand.col-sm-3.col-md-2.mr-0 Company Name
+      input(type="text", placeholder="Search", aria-label="Search").form-control.form-control-dark.w-100
+      ul.navbar-nav.px-3
+        li.nav-item.text-nowrap
+          a(href="#").nav-link Sign out
+    .container-fluid
+      .row
+        nav.col-md-2.d-none.d-md-block.bg-light.sidebar
+          .sidebar-sticky
+            ul.nav.flex-column
+              li.nav-item
+                a(href="#").nav-link.active
+                  span(data-feather="home")
+                  | Dashboard
+                  span.sr-only (current)
+              li.nav-item
+                a(href="#").nav-link
+                  span(data-feather="file")
+                  | Orders
+              li.nav-item
+                a(href="#").nav-link
+                  span(data-feather="shopping-cart")
+                  | Products
+              li.nav-item
+                a(href="#").nav-link
+                  span(data-feather="users")
+                  | Customers
+              li.nav-item
+                a(href="#").nav-link
+                  span(data-feather="bar-chart-2")
+                  | Reports
+              li.nav-item
+                a(href="#").nav-link
+                  span(data-feather="layers")
+                  | Integrations
+            h6.sidebar-heading.d-flex.justify-content-between.align-items-center.px-3.mt-4.mb-1.text-muted
+              span Saved Reports
+              a(href="#").d-flex.align-items-center.text-muted
+                span(data-feather="plus-circle")
+            ul.nav.flex-column.mb-2
+              li.nav-item
+                a(href="#").nav-link
+                  span(data-feather="file-text")
+                  | Current month
+              li.nav-item
+                a(href="#").nav-link
+                  span(data-feather="file-text")
+                  | Last quarter
+              li.nav-item
+                a(href="#").nav-link
+                  span(data-feather="file-text")
+                  | Social engagement
+              li.nav-item
+                a(href="#").nav-link
+                  span(data-feather="file-text")
+                  | Year-end sale
+    block content
+    script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/feather-icons/4.9.0/feather.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.3/Chart.min.js")
+    script(src="/javascripts/dashboard.js")
