@@ -1,12 +1,12 @@
 {
-  "name": "Cookbook",
+  "name": "Lansing's Personal Website",
   "author": {
     "name": "Lansing Nye-Madden",
     "email": "me@lansing.io",
     "url": "https://lansing.io"
   },
-  "bugs": "https://github.com/xBlazeTECH/Cookbook/issues",
-  "homepage": "https://github.com/xBlazeTECH/Cookbook",
+  "bugs": "https://github.com/xBlazeTECH/lansing.io/issues",
+  "homepage": "https://github.com/xBlazeTECH/lansing.io",
   "version": "0.1.0",
   "licence": "gpl-3.0",
   "keywords": [
@@ -14,12 +14,10 @@
     "thin client",
     "centralized"
   ],
-  "description": "Cookbook is an application for the administration and control of Raspberry Pi Slices (Thin Clients)",
-  "repository": "github:xBlazeTECH/Cookbook",
+  "description": "This is the personal website of Lansing Nye-Madden",
+  "repository": "github:xBlazeTECH/lansing.io",
   "private": true,
-  "scripts": {
-    "start": "node ./bin/www"
-  },
+  "main": "app.js",
   "dependencies": {
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
